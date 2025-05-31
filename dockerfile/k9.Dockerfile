@@ -14,8 +14,8 @@ RUN apt-get -qq update && \
 
 FROM gcr.io/distroless/java21-debian12:nonroot
 
-COPY --from=builder --chown=nonroot:nonroot /build/build/libs/*.jar /app/k9.jar
+COPY --from=builder --chown=nonroot:nonroot /build/build/libs/*.jar /app/K9.jar
 
 WORKDIR /app/data
 
-CMD ../k9.jar --auth ${DISCORD_TOKEN}
+CMD echo "../K9.jar --auth $DISCORD_TOKEN"
