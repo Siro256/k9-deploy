@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: dockerfile/k9.Dockerfile
     restart: unless-stopped
-    command: "--auth ${DISCORD_TOKEN}"
     environment:
+      DISCORD_TOKEN: "${DISCORD_TOKEN}"
       JAVA_TOOL_OPTIONS: "${JVM_ARGS}"
     volumes:
       - type: volume
