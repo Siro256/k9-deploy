@@ -18,4 +18,4 @@ COPY --from=builder --chown=nonroot:nonroot /build/build/libs/*.jar /app/k9.jar
 
 WORKDIR /app/data
 
-ENTRYPOINT ["../k9.jar"]
+CMD ["../k9.jar"]
