@@ -1,0 +1,21 @@
+services:
+  k9:
+    build:
+      context: .
+      dockerfile: dockerfile/k9.Dockerfile
+    restart: unless-stopped
+    command: "--auth ${DISCORD_TOKEN}"
+    environment:
+      JAVA_TOOL_OPTIONS: "${JVM_ARGS}"
+    volumes:
+      - type: volumes
+        source: k9-data
+        target: /app/data
+    networks:
+      - default
+
+volumes:
+  k9-data:
+
+networks:
+  default:
