@@ -2,8 +2,8 @@ FROM azul/zulu-openjdk-debian:11.0.27-jdk AS builder
 
 WORKDIR /build
 
-ARG K9_REPOSITORY="https://github.com/tterrag1098/K9.git"
-ARG K9_COMMIT_HASH="633cb0a2b0ca191bf01e5d8f413348d715dda2cc"
+ARG K9_REPOSITORY="https://github.com/Siro256/K9.git"
+ARG K9_COMMIT_HASH="b5477c1200a1e1fc84042290c7d3f772b56bc626"
 
 RUN apt-get -qq update && \
     apt-get -qq -y install git && \
