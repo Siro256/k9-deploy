@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-debian:8u452-jdk AS builder
+FROM azul/zulu-openjdk-debian:11.0.27-jdk AS builder
 
 WORKDIR /build
 
