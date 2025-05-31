@@ -8,7 +8,7 @@ services:
     environment:
       JAVA_TOOL_OPTIONS: "${JVM_ARGS}"
     volumes:
-      - type: volumes
+      - type: volume
         source: k9-data
         target: /app/data
     networks:
