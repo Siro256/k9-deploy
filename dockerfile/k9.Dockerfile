@@ -18,4 +18,5 @@ COPY --from=builder --chown=nonroot:nonroot /build/build/libs/*.jar /app/K9.jar
 
 WORKDIR /app/data
 
-CMD ["/bin/sh", "-c", "echo '../K9.jar --auth $DISCORD_TOKEN'"]
+ENTRYPOINT []
+CMD /usr/bin/java $JVM_ARGS -jar ../K9.jar --auth $DISCORD_TOKEN
