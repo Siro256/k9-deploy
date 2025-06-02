@@ -10,7 +10,7 @@ RUN apt-get -qq update && \
     git clone ${K9_REPOSITORY} ./ && \
     git checkout ${K9_COMMIT_HASH} && \
     chmod +x gradlew && \
-    ./gradlew assemble
+    ./gradlew shadowJar
 
 FROM gcr.io/distroless/java21-debian12:nonroot
 
