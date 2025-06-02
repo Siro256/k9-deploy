@@ -5,8 +5,8 @@ services:
       dockerfile: dockerfile/k9.Dockerfile
     restart: unless-stopped
     environment:
-      DISCORD_TOKEN: "${DISCORD_TOKEN}"
-      JVM_ARGS: "${JVM_ARGS}"
+      JAVA_TOOL_OPTIONS: "${JVM_ARGS}"
+      K9_ARGS: "--auth ${DISCORD_TOKEN}"
     volumes:
       - type: volume
         source: k9-data
