@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       JAVA_TOOL_OPTIONS: "${JVM_ARGS}"
-      K9_ARGS: "--auth ${DISCORD_TOKEN}"
+      K9_OPTS: "--auth ${DISCORD_TOKEN}"
     volumes:
       - type: volume
         source: k9-data
